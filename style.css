@@ -1,56 +1,169 @@
 @charset "UTF-8";
-*{
+
+@font-face {
+    font-family:'fontes/Supercraft.otf';
+    src: url('fontes/Supercraft.otf') format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*
+{
     margin: 0px;
     padding: 0px;
 }
 
-body > section
+ul > li 
 {
-    display: flex;
-    flex-direction: row;
-    align-items:baseline;
-    width:1000px;
+    list-style: none;
+    display: inline;
+   
+}
+
+body
+{
+    display: inline-block;
+    
 }
 
 /* O atributo Float é utilizado para fazermos o nosso bloco(div)
   literalmente flutue e se posicione onde queremos na página,
   quando escolhemos left, dizemos que esse bloco irá se posicionar na
   parte esquerda da página */
-.box
+.box-e
 {
-    width:500px;
-    height:300px;
+    width: 400px;
+    height:350px;
     float:left;
+    padding: 10px;
+    
+}
+
+.box-d
+{
+    width:900px;
+    height:350px;
+    float:left;
+    padding: 10px;
+    
 }
 
 #perfil-esquerda
 {
-    background-color: darkgoldenrod;
+    background-color: #2b2c2c;
     
+}
+
+hr
+{
+    margin: 40px 0px 20px 0px;
 }
 
 #perfil-direita
 {
-    background-color: darksalmon;
+    background-color:#2d2e2e;
+}
+
+#perfil-direita span:nth-child(1)
+{
+    color: #ffff;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 5em;
+    letter-spacing: 1px;
+    display:block;
+    padding: 10px;
+
+}
+
+#perfil-direita span:nth-child(2)
+{
+    font-size: 20px;
+    color: #a4a5a6;
+    display:block;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    
 }
 
 #sobre-esquerda
 {
-    background-color: darksalmon;
+    background-color:#292a2a;
+    
+}
+
+#sobre-esquerda > span
+{
+    color: #ffff;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 5em;
+    
+    
 }
 
 #sobre-direita
 {
-    background-color: darkgoldenrod;
+    background-color: #2b2c2c;
 }
+
 
 #habilidades-esquerda
 {
-    background-color: darkgoldenrod;
-    
+    background-color:#2b2c2c;
+
 }
 
 #habilidades-direita
 {
-    background-color: darksalmon;
+    background-color: #2d2e2e;
+}
+
+
+#linguas-esquerda
+{
+    background-color: #292a2a;
+}
+
+#linguas-direita
+{
+    background-color: #2b2c2c;
+}
+
+#ferramentas-esquerda
+{
+    background-color: #2b2c2c;
+}
+
+#ferramentas-direita
+{
+    background-color: #2d2e2e;
+}
+
+#educacao-esquerda
+{
+    background-color: #292a2a;
+}
+
+#educacao-direita
+{
+    background-color:#2b2c2c ;
+}
+
+#experiencia-esquerda
+{
+    background-color: #2b2c2c;
+}
+
+#experiencia-direita
+{
+    background-color: #2d2e2e;
+}
+
+#projetos-esquerda
+{
+    background-color: #292a2a;
+}
+
+#projetos-direita
+{
+    background-color: #2b2c2c;
 }
