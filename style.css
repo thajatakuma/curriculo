@@ -1,0 +1,56 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body > section
+{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    width:1000px;
+}
+
+/* O atributo Float é utilizado para fazermos o nosso bloco(div)
+  literalmente flutue e se posicione onde queremos na página,
+  quando escolhemos left, dizemos que esse bloco irá se posicionar na
+  parte esquerda da página */
+.box
+{
+    width:500px;
+    height:300px;
+    float:left;
+}
+
+#perfil-esquerda
+{
+    background-color: darkgoldenrod;
+    
+}
+
+#perfil-direita
+{
+    background-color: darksalmon;
+}
+
+#sobre-esquerda
+{
+    background-color: darksalmon;
+}
+
+#sobre-direita
+{
+    background-color: darkgoldenrod;
+}
+
+#habilidades-esquerda
+{
+    background-color: darkgoldenrod;
+    
+}
+
+#habilidades-direita
+{
+    background-color: darksalmon;
+}
