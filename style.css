@@ -1,16 +1,20 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&display=swap');
+
 @font-face {
     font-family:'fontes/Supercraft.otf';
     src: url('fontes/Supercraft.otf') format('opentype');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 *
 {
     margin: 0px;
     padding: 0px;
+    /*indica que o tamanho agora levará em conta até a borda -- ou seja, o width será a soma do conteúdo com a borda e o padding.*/
+    box-sizing: border-box;
 }
 
 ul > li 
@@ -48,20 +52,18 @@ body
     
 }
 
+/*================================================================================================*/
 #perfil-esquerda
 {
     background-color: #2b2c2c;
-    
 }
 
-hr
-{
-    margin: 40px 0px 20px 0px;
-}
 
 #perfil-direita
 {
     background-color:#2d2e2e;
+    text-align: center;
+    padding: 40px;
 }
 
 #perfil-direita span:nth-child(1)
@@ -72,7 +74,26 @@ hr
     letter-spacing: 1px;
     display:block;
     padding: 10px;
+}
 
+#perfil-direita span:nth-child(1)::before
+{
+    content: "";
+    width: 300px;
+    height: 4px;
+    background-color: #ffff;
+    display: block;
+    margin: 0px auto;
+}
+
+#perfil-direita span:nth-child(1)::after
+{
+    content: "";
+    width: 300px;
+    height: 4px;
+    background-color: #ffff;
+    display: block;
+    margin: 0px auto;
 }
 
 #perfil-direita span:nth-child(2)
@@ -80,53 +101,150 @@ hr
     font-size: 20px;
     color: #a4a5a6;
     display:block;
-    padding: 10px;
-    font-family: 'Open Sans', sans-serif;
+    padding: 10px 0px 20px 0px;
+    font-family: 'Source Sans 3', sans-serif;
     
 }
+
+#perfil-direita span:nth-child(2)::after
+{
+    content: "";
+    width: 800px;
+    height: 1px;
+    background-color: #a4a5a6;
+    display: block;
+    margin: 0px auto;
+    margin: 30px;
+}
+
+#contatos > ul > li
+{
+    margin: 10px;
+}
+
+/*================================================================================================*/
 
 #sobre-esquerda
 {
     background-color:#292a2a;
-    
+    text-align: center;
 }
 
 #sobre-esquerda > span
 {
-    color: #ffff;
+    color: #a4a5a6;
     font-family:'fontes/Supercraft.otf';
-    font-size: 5em;
-    
-    
+    font-size: 4em;
+    /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.*/
+    line-height: 350px;
 }
 
 #sobre-direita
 {
     background-color: #2b2c2c;
+    align-items: center;
+
 }
 
+#sobre-direita p:nth-child(1)
+{
+    font-family: 'Source Sans 3', sans-serif;
+    color: #a4a5a6;
+    padding: 50px 50px 10px 50px;
+    text-align: justify;
+    font-size: 18px;
+    /*text-indent: 20px;*/
+}
+
+#sobre-direita p:nth-child(2)
+{
+    font-family: 'Source Sans 3', sans-serif;
+    color: #a4a5a6;
+    text-align: justify;
+    padding: 10px 50px 50px 50px;
+    font-size: 18px;
+    /*text-indent: 20px;*/
+    
+}
+
+/*================================================================================================*/
 
 #habilidades-esquerda
 {
     background-color:#2b2c2c;
+    text-align: center;
+}
 
+#habilidades-esquerda > span
+{
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 4em;
+    /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.*/
+    line-height: 350px;
 }
 
 #habilidades-direita
 {
     background-color: #2d2e2e;
+    align-items: center; 
 }
-
-
-#linguas-esquerda
+#barras-progresso
 {
-    background-color: #292a2a;
+    padding: 50px 50px 50px 250px;
 }
 
-#linguas-direita
+#habilidades-direita > #barras-progresso >.barra-span > span
 {
-    background-color: #2b2c2c;
+    font-family:'fontes/Supercraft.otf';
+    color:#a4a5a6;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: 24px;
 }
+
+#barras-progresso >.barra-span
+{
+    padding: 10px;
+}
+
+.container
+{
+    width: 60%;
+    background-color: #a4a5a6;
+    border-radius: 5px;
+   
+    
+}
+
+.habilidades-html, .habilidades-css,.habilidades-python
+{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom:10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.habilidades-html
+{
+    width: 70%;
+    background-color: #7c13a5;
+}
+
+.habilidades-css
+{
+    width: 50%;
+    background-color: #7c13a5;
+}
+
+.habilidades-python
+{
+    width: 40%;
+    background-color: #7c13a5;
+}
+
+/*================================================================================================*/
 
 #ferramentas-esquerda
 {
@@ -138,9 +256,20 @@ hr
     background-color: #2d2e2e;
 }
 
+/*================================================================================================*/
+
 #educacao-esquerda
 {
     background-color: #292a2a;
+    text-align: center;
+}
+
+#educacao-esquerda> span
+{
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 4em;
+    line-height: 350px;
 }
 
 #educacao-direita
@@ -148,15 +277,154 @@ hr
     background-color:#2b2c2c ;
 }
 
+.timeline-itens
+{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-itens::before
+{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #a4a5a6;
+    left: calc(50%);
+
+}
+
+.timeline-item
+{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child
+{
+    margin-bottom: 0px;
+
+}
+
+/* odd - Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc.*/
+.timeline-item:nth-child(odd)
+{
+    padding-right: calc(50% + 30px);
+    text-align: right;
+
+}
+
+/*even - Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.*/
+.timeline-item:nth-child(even)
+{
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-ponto
+{
+    height: 16px;
+    width: 16px;
+    background-color: #ffff;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-data
+{
+    font-size: 18px;
+    color: #ffff;
+    margin: 6px 0 15px;
+}
+
+.timeline-container
+{
+    background-color: #424241;
+    padding: 20px;
+    border-radius: 5px;  
+}
+
+.timeline-container > h3
+{
+    font-size: 20px;
+    color: #ffff;
+    margin: 0px 0 px 10px;
+    text-transform: capitalize;
+}
+
+.timeline-container > p
+{
+    color: #a4a5a6;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/*timeline responsiva*/
+
+@media( max-width: 760px)
+{
+    .timeline-itens::before
+    {
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd)
+    {
+        padding-right: 0px;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even)
+    {
+        padding-left: 37px;
+    }
+    .timeline-ponto
+    {
+        left: 0px;
+    }
+
+}
+
+/*================================================================================================*/
+
 #experiencia-esquerda
 {
     background-color: #2b2c2c;
+    text-align: center;
 }
+
+#experiencia-esquerda > span
+{
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 4em;
+    line-height: 350px;
+}
+
 
 #experiencia-direita
 {
     background-color: #2d2e2e;
 }
+
+/*================================================================================================*/
+
+#linguas-esquerda
+{
+    background-color: #292a2a;
+}
+
+#linguas-direita
+{
+    background-color: #2b2c2c;
+}
+
+/*================================================================================================*/
 
 #projetos-esquerda
 {
@@ -167,3 +435,5 @@ hr
 {
     background-color: #2b2c2c;
 }
+
+/*================================================================================================*/
