@@ -9,14 +9,27 @@
     src: url('fontes/Supercraft.otf') format('opentype');
 }
 
-
-
 *
 {
     margin: 0px;
     padding: 0px;
     /*indica que o tamanho agora levará em conta até a borda -- ou seja, o width será a soma do conteúdo com a borda e o padding.*/
     box-sizing: border-box;
+}
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+html
+{
+    /*a cada 1rem será considerado 10px, se mudar a porcentagem todos os textos mudam*/
+    font-size: 62.5%;
+}
+
+body
+{
+    font-size: 1.6rem;
 }
 
 ul > li 
@@ -46,10 +59,12 @@ ul > li
     padding: 10px;
 }
 
-/*================================================================================================*/  
-section
+#perfil, #sobre, #habilidades, #ferramentas, #educacao, #experiencia, #linguas, #projetos
 {
     display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 #perfil-esquerda
@@ -61,18 +76,11 @@ section
     display: flex;
 }
 
-#perfil > #perfil-esquerda> #imagem
-{
-    text-align: center;
-}
-
 #perfil > #perfil-esquerda> #imagem > img
 {
     width: 230px;
     height:200px;
-    
 }
-
 
 #perfil-direita
 {
@@ -85,7 +93,7 @@ section
 {
     color: #ffff;
     font-family:'fontes/Supercraft.otf';
-    font-size: 5em;
+    font-size: 7.0rem;
     letter-spacing: 1px;
     display:block;
     padding: 10px;
@@ -113,7 +121,7 @@ section
 
 #perfil-direita span:nth-child(2)
 {
-    font-size: 20px;
+    font-size: 2.0rem;
     color: #a4a5a6;
     display:block;
     padding: 10px 0px 20px 0px;
@@ -136,8 +144,6 @@ section
     margin: 10px;
 }
 
-/*================================================================================*/
-
 #sobre-esquerda
 {
     background-color:#292a2a;
@@ -148,7 +154,7 @@ section
 {
     color: #a4a5a6;
     font-family:'fontes/Supercraft.otf';
-    font-size: 4em;
+    font-size: 6.0rem;
     /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.*/
     line-height: 400px;
 }
@@ -158,7 +164,6 @@ section
 {
     background-color: #2b2c2c;
     align-items: center;
-
 }
 
 #sobre-direita p:nth-child(1)
@@ -167,7 +172,7 @@ section
     color: #a4a5a6;
     padding: 30px 50px 10px 50px;
     text-align: justify;
-    font-size: 18px;
+    font-size: 1.8rem;
     /*text-indent: 20px;*/
 }
 
@@ -177,12 +182,10 @@ section
     color: #a4a5a6;
     text-align: justify;
     padding: 10px 50px 30px 50px;
-    font-size: 18px;
+    font-size: 1.8rem;
     /*text-indent: 20px;*/
     
 }
-
-/*================================================================================================*/
 
 #habilidades-esquerda
 {
@@ -194,7 +197,7 @@ section
 {
     color: #a4a5a6;
     font-family:'fontes/Supercraft.otf';
-    font-size: 4em;
+    font-size: 6.0rem;
     /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.*/
     line-height: 400px;
 }
@@ -215,7 +218,7 @@ section
     color:#a4a5a6;
     letter-spacing: 1px;
     margin-bottom: 5px;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 #barras-progresso >.barra-span
@@ -259,7 +262,6 @@ section
     background-color: #7c13a5;
 }
 
-/*================================================================================================*/
 
 #ferramentas-esquerda
 {
@@ -271,8 +273,6 @@ section
     background-color: #2d2e2e;
 }
 
-/*================================================================================================*/
-
 #educacao-esquerda
 {
     background-color: #292a2a;
@@ -283,7 +283,7 @@ section
 {
     color: #a4a5a6;
     font-family:'fontes/Supercraft.otf';
-    font-size: 4em;
+    font-size: 6.0rem;
     line-height: 400px;
 }
 
@@ -352,7 +352,7 @@ section
 
 .timeline-data
 {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #ffff;
     margin: 6px 0 15px;
 }
@@ -366,7 +366,7 @@ section
 
 .timeline-container > h3
 {
-    font-size: 20px;
+    font-size: 2.0rem;
     color: #ffff;
     margin: 0px 0 px 10px;
     text-transform: capitalize;
@@ -375,11 +375,10 @@ section
 .timeline-container > p
 {
     color: #a4a5a6;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 20px;
 }
 
-/*================================================================================================*/
 
 #experiencia-esquerda
 {
@@ -391,7 +390,7 @@ section
 {
     color: #a4a5a6;
     font-family:'fontes/Supercraft.otf';
-    font-size: 4em;
+    font-size: 6.0rem;
     line-height: 400px;
 }
 
@@ -401,7 +400,7 @@ section
     background-color: #2d2e2e;
 }
 
-/*================================================================================================*/
+
 
 #linguas-esquerda
 {
@@ -413,7 +412,7 @@ section
     background-color: #2b2c2c;
 }
 
-/*================================================================================================*/
+
 
 #projetos-esquerda
 {
@@ -425,7 +424,6 @@ section
     background-color: #2b2c2c;
 }
 
-/*================================================================================================*/
 
 /*divs responsiva*/
 @media(max-width:910px)
@@ -438,7 +436,8 @@ section
     .box-e
     {
         width:auto;
-        height: 300px;  
+        height: auto;
+        text-align: center;  
     }
 
     .box-e > span
