@@ -46,7 +46,7 @@ ul > li
 
 .box-e
 {
-    width:468px;
+    width:486px;
     height:400px;
     padding: 20px;
 }
@@ -57,6 +57,31 @@ ul > li
     width:100%;
     height:400px;
     padding: 10px;
+}
+
+.esquerda
+{
+    background-color: blueviolet;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: right;
+    justify-content: right;
+   
+}
+
+.direita
+{
+    background-color: chartreuse;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: left;
+    justify-content: left;
+    
+   
 }
 
 #perfil, #sobre, #habilidades, #ferramentas, #educacao, #experiencia, #linguas, #projetos
@@ -74,9 +99,10 @@ ul > li
     align-items: center;
     /*deixa um ao lado do outro*/
     display: flex;
+
 }
 
-#perfil > #perfil-esquerda> #imagem > img
+#perfil >.esquerda> #perfil-esquerda> #imagem > img
 {
     width: 230px;
     height:200px;
@@ -433,7 +459,26 @@ ul > li
         flex-direction: column;
     }
 
-    .box-e
+    .esquerda 
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .direita 
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+     .box-e
     {
         width:100%;
         height: auto;
@@ -450,6 +495,7 @@ ul > li
     {
         height: auto;
     }
+
 }
 
 /*timeline responsiva*/
@@ -475,3 +521,4 @@ ul > li
     {
         left: 0px;}
 }
+
