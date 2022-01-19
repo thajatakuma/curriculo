@@ -16,11 +16,13 @@
     /*indica que o tamanho agora levará em conta até a borda -- ou seja, o width será a soma do conteúdo com a borda e o padding.*/
     box-sizing: border-box;
 }
+
 html, body
 {
     width: 100%;
     height: 100%;
 }
+
 html
 {
     /*a cada 1rem será considerado 10px, se mudar a porcentagem todos os textos mudam*/
@@ -42,8 +44,6 @@ ul > li
   literalmente flutue e se posicione onde queremos na página,
   quando escolhemos left, dizemos que esse bloco irá se posicionar na
   parte esquerda da página */
-
-
 .box-e
 {
     width:486px;
@@ -59,32 +59,42 @@ ul > li
     padding: 10px;
 }
 
+.cor1
+{
+    background-color: #2b2c2c;
+}
+
+.cor2
+{
+    background-color:#2d2e2e;
+}
+
+.cor3
+{
+    background-color:#292a2a;
+}
+
 .esquerda
 {
-    background-color: blueviolet;
     width: 35%;
     height: 100%;
     display: flex;
     position: relative;
     align-items: right;
     justify-content: right;
-   
 }
 
 .direita
 {
-    background-color: chartreuse;
     width: 65%;
     height: 100%;
     display: flex;
     position: relative;
     align-items: left;
     justify-content: left;
-    
-   
 }
 
-#perfil, #sobre, #habilidades, #ferramentas, #educacao, #experiencia, #linguas, #projetos
+#perfil, #sobre, #habilidades, #ferramentas , #educacao, #experiencia, #linguas, #projetos
 {
     display: flex;
     position: relative;
@@ -99,7 +109,6 @@ ul > li
     align-items: center;
     /*deixa um ao lado do outro*/
     display: flex;
-
 }
 
 #perfil >.esquerda> #perfil-esquerda> #imagem > img
@@ -112,7 +121,7 @@ ul > li
 {
     background-color:#2d2e2e;
     text-align: center;
-    padding: 40px;
+    padding: 80px 40px 40px 40px;
 }
 
 #perfil-direita span:nth-child(1)
@@ -151,8 +160,7 @@ ul > li
     color: #a4a5a6;
     display:block;
     padding: 10px 0px 20px 0px;
-    font-family: 'Source Sans 3', sans-serif;
-    
+    font-family: 'Source Sans 3', sans-serif;  
 }
 
 #perfil-direita span:nth-child(2)::after
@@ -233,6 +241,7 @@ ul > li
     background-color: #2d2e2e;
     align-items: center; 
 }
+
 #barras-progresso
 {
     padding: 50px 50px 50px 250px;
@@ -257,8 +266,6 @@ ul > li
     width: 60%;
     background-color: #a4a5a6;
     border-radius: 5px;
-   
-    
 }
 
 .habilidades-html, .habilidades-css,.habilidades-python
@@ -288,10 +295,19 @@ ul > li
     background-color: #7c13a5;
 }
 
-
 #ferramentas-esquerda
 {
     background-color: #2b2c2c;
+    text-align: center;
+}
+
+#ferramentas-esquerda > span
+{
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 6.0rem;
+    /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.*/
+    line-height: 400px;
 }
 
 #ferramentas-direita
@@ -335,7 +351,6 @@ ul > li
     height: 100%;
     background-color: #a4a5a6;
     left: calc(50%);
-
 }
 
 .timeline-item
@@ -348,7 +363,6 @@ ul > li
 .timeline-item:last-child
 {
     margin-bottom: 0px;
-
 }
 
 /* odd - Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc.*/
@@ -356,7 +370,6 @@ ul > li
 {
     padding-right: calc(50% + 30px);
     text-align: right;
-
 }
 
 /*even - Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.*/
@@ -405,7 +418,6 @@ ul > li
     line-height: 20px;
 }
 
-
 #experiencia-esquerda
 {
     background-color: #2b2c2c;
@@ -420,17 +432,23 @@ ul > li
     line-height: 400px;
 }
 
-
 #experiencia-direita
 {
     background-color: #2d2e2e;
 }
 
-
-
 #linguas-esquerda
 {
     background-color: #292a2a;
+    text-align: center;
+}
+
+#linguas-esquerda > span
+{
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 6.0rem;
+    line-height: 400px;
 }
 
 #linguas-direita
@@ -438,11 +456,18 @@ ul > li
     background-color: #2b2c2c;
 }
 
-
-
 #projetos-esquerda
 {
     background-color: #292a2a;
+    text-align: center;
+}
+
+#projetos-esquerda > span
+{
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf';
+    font-size: 6.0rem;
+    line-height: 400px;
 }
 
 #projetos-direita
@@ -450,8 +475,8 @@ ul > li
     background-color: #2b2c2c;
 }
 
-
 /*divs responsiva*/
+
 @media(max-width:910px)
 {
     section
@@ -478,6 +503,7 @@ ul > li
         align-items: center;
         justify-content: center;
     }
+    
      .box-e
     {
         width:100%;
@@ -495,7 +521,6 @@ ul > li
     {
         height: auto;
     }
-
 }
 
 /*timeline responsiva*/
@@ -506,6 +531,7 @@ ul > li
     {
         left: 7px;
     }
+
     .timeline-item:nth-child(odd)
     {
         padding-right: 0px;
@@ -517,8 +543,10 @@ ul > li
     {
         padding-left: 37px;
     }
+
     .timeline-ponto
     {
-        left: 0px;}
+        left: 0px;
+    }
 }
 
