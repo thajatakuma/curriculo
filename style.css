@@ -135,15 +135,7 @@ ul > li
     padding: 10px;
 }
 
-#perfil-direita span:nth-child(1)::before
-{
-    content: "";
-    width: 300px;
-    height: 4px;
-    background-color: #ffff;
-    display: block;
-    margin: 0px auto;
-}
+
 
 #perfil-direita span:nth-child(1)::after
 {
@@ -319,40 +311,32 @@ ul > li
 
 #ferramentas-direita
 {
-    background-color: #2d2e2e;
-    
+    background-color: #2d2e2e;  
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf';
 }
 
 .direita > #ferramentas-direita > #fer
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20.5vh 20.5vh;
-   
+    grid-template-rows: 30.7vh 30.7vh;
 }
 
-
-#fer01
+#fer
 {
-    background-color: aqua;
+    align-items: center;
 }
 
-#fer02
+#fer01, #fer02, #fer03, #fer04
 {
-    background-color: rgb(229, 255, 0);
+    text-align: center;
 }
-
-#fer03
+#fer03 > img
 {
-    background-color: rgb(255, 0, 242);
+    width: 50px;
+    height: 50px;
 }
-
-#fer04
-{
-    background-color: rgb(255, 0, 21);
-}
-
-
 
 #educacao-esquerda
 {
