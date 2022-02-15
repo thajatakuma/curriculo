@@ -320,7 +320,39 @@ ul > li
 #ferramentas-direita
 {
     background-color: #2d2e2e;
+    
 }
+
+.direita > #ferramentas-direita > #fer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20.5vh 20.5vh;
+   
+}
+
+
+#fer01
+{
+    background-color: aqua;
+}
+
+#fer02
+{
+    background-color: rgb(229, 255, 0);
+}
+
+#fer03
+{
+    background-color: rgb(255, 0, 242);
+}
+
+#fer04
+{
+    background-color: rgb(255, 0, 21);
+}
+
+
 
 #educacao-esquerda
 {
