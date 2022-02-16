@@ -45,37 +45,8 @@ ul > li
   literalmente flutue e se posicione onde queremos na página,
   quando escolhemos left, dizemos que esse bloco irá se posicionar na
   parte esquerda da página */
-.box-e
-{
-    width:566px;
-    height:400px;
-    padding: 20px;
-}
 
-.box-d
-{
-    max-width:800px;
-    width:100%;
-    height:400px;
-    padding: 10px;
-}
-
-.cor1
-{
-    background-color: #2b2c2c;
-}
-
-.cor2
-{
-    background-color:#2d2e2e;
-}
-
-.cor3
-{
-    background-color:#292a2a;
-}
-
-.esquerda
+  .esquerda
 {
     width: 45%;
     height: 100%;
@@ -94,6 +65,38 @@ ul > li
     align-items: left;
     justify-content: left;
 }
+.box-e
+{
+    width:566px;
+    height:400px;
+    padding: 20px;
+}
+
+.box-d
+{
+    max-width:800px;
+    width:100%;
+    height:400px;
+    padding: 10px;
+    
+}
+
+.cor1
+{
+    background-color: #2b2c2c;
+}
+
+.cor2
+{
+    background-color:#2d2e2e;
+}
+
+.cor3
+{
+    background-color:#292a2a;
+}
+
+
 
 #perfil, #sobre, #habilidades, #ferramentas , #educacao, #experiencia, #linguas, #projetos
 {
@@ -293,6 +296,7 @@ ul > li
     width: 40%;
     background-color: #7c13a5;
 }
+       /**########################FERAMENTAS############################**/
 
 #ferramentas-esquerda
 {
@@ -314,6 +318,7 @@ ul > li
     background-color: #2d2e2e;  
     color: #a4a5a6;
     font-family:'fontes/Supercraft.otf';
+    font-size: 2.0rem;
 }
 
 .direita > #ferramentas-direita > #fer
@@ -330,9 +335,40 @@ ul > li
 
 #fer01, #fer02, #fer03, #fer04
 {
-    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 90%;
+    transform: translateX(-50%); 
+    
 }
-#fer03 > img
+
+#fer01 > span
+{
+    padding-left: 5px;
+
+}
+
+#fer02 > span
+{
+    padding-left: 5px;
+
+}
+
+#fer03 > span
+{
+    padding-left: 5px;
+
+}
+
+#fer04 > span
+{
+    padding-left: 5px;
+
+}
+
+#fer04 > img
 {
     width: 50px;
     height: 50px;
@@ -357,6 +393,7 @@ ul > li
     background-color:#2b2c2c ;
 }
 
+
 .timeline-itens
 {
     max-width: 880px;
@@ -364,6 +401,7 @@ ul > li
     display: flex;
     flex-wrap: wrap;
     position: relative;
+
 }
 
 .timeline-itens::before
@@ -371,14 +409,16 @@ ul > li
     content: "";
     position: absolute;
     width: 2px;
-    height: 100%;
+    height: 380px;
     background-color: #a4a5a6;
-    left: calc(50%);
+    left: 7px;
+    margin-left: 20px;
+    
 }
 
 .timeline-item
 {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     width: 100%;
     position: relative;
 }
@@ -391,15 +431,17 @@ ul > li
 /* odd - Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc.*/
 .timeline-item:nth-child(odd)
 {
-    padding-right: calc(50% + 30px);
-    text-align: right;
+    text-align: left;
+    padding-right: 0px;
+    padding-left: 37px;
+    
 }
 
-/*even - Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.*/
+/*even - Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.
 .timeline-item:nth-child(even)
 {
     padding-left: calc(50% + 30px);
-}
+}*/
 
 .timeline-ponto
 {
@@ -407,16 +449,17 @@ ul > li
     width: 16px;
     background-color: #ffff;
     position: absolute;
-    left: calc(50% - 8px);
+    left: 0px;
     border-radius: 50%;
     top: 10px;
+    margin-left: 20px;
 }
 
 .timeline-data
 {
     font-size: 1.8rem;
     color: #ffff;
-    margin: 6px 0 15px;
+    margin: 6px 0 15px 20px;
 }
 
 .timeline-container
@@ -424,6 +467,7 @@ ul > li
     background-color: #424241;
     padding: 20px;
     border-radius: 5px;  
+    margin-left: 20px;
 }
 
 .timeline-container > h3
@@ -539,12 +583,62 @@ ul > li
      .box-e
     {
         width:auto;
+        height: 250px;
+        position:relative;
+        
     }
-
+    #sobre-esquerda > span
+    {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+     
+    #habilidades-esquerda > span
+    {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+    
+    #ferramentas-esquerda > span
+    {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+    
+    #educacao-esquerda > span
+    {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+    
+    #linguas-esquerda > span
+    {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+    
+    #projetos-esquerda > span
+    {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+    
     .box-d
     {
         width:100%;
-        height:100%;
+        height:auto;
         align-items: center;
     }
 
