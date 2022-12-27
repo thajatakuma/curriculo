@@ -16,12 +16,14 @@
     padding: 0px;
     /*indica que o tamanho agora levará em conta até a borda -- ou seja, o width será a soma do conteúdo com a borda e o padding.*/
     box-sizing: border-box;
+    
 }
 
 html, body
 {
     width: 100%;
     height: 100%;
+    background-color:#292a2a;
 }
 
 html
@@ -54,6 +56,7 @@ ul > li
     position: relative;
     align-items: right;
     justify-content: right;
+    
 }
 
 .direita
@@ -64,21 +67,19 @@ ul > li
     position: relative;
     align-items: left;
     justify-content: left;
+
 }
 .box-e
 {
     width:566px;
-    height:400px;
-    padding: 20px;
+    height:500px;
 }
 
 .box-d
 {
     max-width:800px;
     width:100%;
-    height:400px;
-    padding: 10px;
-    
+    height:500px;
 }
 
 .cor1
@@ -102,17 +103,19 @@ ul > li
 {
     display: flex;
     position: relative;
-    align-items: center;
-    justify-content: center;
+
+    
 }
 
 #perfil-esquerda
 {
     background-color: #2b2c2c;
+    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     /*deixa um ao lado do outro*/
-    display: flex;
+    
 }
 
 #perfil >.esquerda> #perfil-esquerda> #imagem > img
@@ -125,7 +128,8 @@ ul > li
 {
     background-color:#2d2e2e;
     text-align: center;
-    padding: 80px 40px 40px 40px;
+    padding: 120px 40px 40px 40px;
+    position: relative;
 }
 
 #perfil-direita span:nth-child(1)
@@ -184,6 +188,10 @@ ul > li
 {
     background-color:#292a2a;
     text-align: center;
+    line-height: 500px;
+    
+    
+    
 }
 
 #sobre-esquerda > span
@@ -191,8 +199,9 @@ ul > li
     color: #a4a5a6;
     font-family:'fontes/Supercraft.otf';
     font-size: 6.0rem;
-    /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.*/
-    line-height: 400px;
+    /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.line-height: 500px;*/
+    
+    
 }
 
 
@@ -200,33 +209,26 @@ ul > li
 {
     background-color: #2b2c2c;
     align-items: center;
+    padding: 80px;
+    
 }
 
 #sobre-direita p:nth-child(1)
 {
     font-family: 'Source Sans 3', sans-serif;
     color: #a4a5a6;
-    padding: 30px 50px 10px 50px;
+    padding: 300px, 30px, 10px 30px;
     text-align: justify;
     font-size: 1.8rem;
+    margin-top: 20px;
     /*text-indent: 20px;*/
-}
-
-#sobre-direita p:nth-child(2)
-{
-    font-family: 'Source Sans 3', sans-serif;
-    color: #a4a5a6;
-    text-align: justify;
-    padding: 10px 50px 30px 50px;
-    font-size: 1.8rem;
-    /*text-indent: 20px;*/
-    
 }
 
 #habilidades-esquerda
 {
     background-color:#2b2c2c;
     text-align: center;
+    line-height: 500px;
 }
 
 #habilidades-esquerda > span
@@ -270,7 +272,7 @@ ul > li
     border-radius: 5px;
 }
 
-.habilidades-html, .habilidades-css,.habilidades-python
+.habilidades-html-css, .habilidades-javascript,.habilidades-python, .habilidades-c 
 {
     text-align: right;
     padding-top: 10px;
@@ -279,105 +281,35 @@ ul > li
     border-radius: 5px;
 }
 
-.habilidades-html
+.habilidades-html-css
 {
     width: 70%;
     background-color: #7c13a5;
 }
 
-.habilidades-css
+.habilidades-javascript
 {
-    width: 50%;
+    width: 40%;
     background-color: #7c13a5;
 }
 
 .habilidades-python
 {
-    width: 40%;
+    width: 70%;
     background-color: #7c13a5;
 }
-       /**########################FERAMENTAS############################**/
 
-#ferramentas-esquerda
+.habilidades-c
 {
-    background-color: #2b2c2c;
-    text-align: center;
-}
-
-#ferramentas-esquerda > span
-{
-    color: #a4a5a6;
-    font-family:'fontes/Supercraft.otf';
-    font-size: 6.0rem;
-    /*para eu conseguir centralizá-lo -  permite controlar o espaçamento entre as linhas de um texto.*/
-    line-height: 400px;
-}
-
-#ferramentas-direita
-{
-    background-color: #2d2e2e;  
-    color: #a4a5a6;
-    font-family:'fontes/Supercraft.otf';
-    font-size: 2.0rem;
-}
-
-.direita > #ferramentas-direita > #fer
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30.7vh 30.7vh;
-}
-
-#fer
-{
-    align-items: center;
-}
-
-#fer01, #fer02, #fer03, #fer04
-{
-    
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 90%;
-    transform: translateX(-50%); 
-    
-}
-
-#fer01 > span
-{
-    padding-left: 5px;
-
-}
-
-#fer02 > span
-{
-    padding-left: 5px;
-
-}
-
-#fer03 > span
-{
-    padding-left: 5px;
-
-}
-
-#fer04 > span
-{
-    padding-left: 5px;
-
-}
-
-#fer04 > img
-{
-    width: 50px;
-    height: 50px;
+    width: 40%;
+    background-color: #7c13a5;
 }
 
 #educacao-esquerda
 {
     background-color: #292a2a;
     text-align: center;
+    line-height: 500px;
 }
 
 #educacao-esquerda> span
@@ -390,8 +322,18 @@ ul > li
 
 #educacao-direita
 {
-    background-color:#2b2c2c ;
+    /*background-color:#2b2c2c ;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 2.0rem;
+    color: #a4a5a6;*/
+    font-family:'fontes/Supercraft.otf';
+    color:#a4a5a6;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: 2.4rem;
+    
 }
+
 
 
 .timeline-itens
@@ -409,17 +351,18 @@ ul > li
     content: "";
     position: absolute;
     width: 2px;
-    height: 380px;
+    height: 180px;
     background-color: #a4a5a6;
     left: 7px;
-    margin-left: 20px;
+    margin-left:20px;
+    margin-top: 150px;
     
 }
 
 .timeline-item
 {
     margin-bottom: 100px;
-    width: 100%;
+    width: 80%;
     position: relative;
 }
 
@@ -433,7 +376,7 @@ ul > li
 {
     text-align: left;
     padding-right: 0px;
-    padding-left: 37px;
+    padding-left: 40px;
     
 }
 
@@ -451,7 +394,7 @@ ul > li
     position: absolute;
     left: 0px;
     border-radius: 50%;
-    top: 10px;
+    top: 150px;
     margin-left: 20px;
 }
 
@@ -459,7 +402,7 @@ ul > li
 {
     font-size: 1.8rem;
     color: #ffff;
-    margin: 6px 0 15px 20px;
+    margin: 150px 0 15px 20px;
 }
 
 .timeline-container
@@ -482,10 +425,10 @@ ul > li
 {
     color: #a4a5a6;
     font-size: 1.6rem;
-    line-height: 20px;
+    line-height: 50px; /*tamanho do balão*/
 }
 
-#experiencia-esquerda
+/*#experiencia-esquerda
 {
     background-color: #2b2c2c;
     text-align: center;
@@ -503,11 +446,12 @@ ul > li
 {
     background-color: #2d2e2e;
 }
-
+*/
 #linguas-esquerda
 {
-    background-color: #292a2a;
+    background-color: #2b2c2c;
     text-align: center;
+    line-height: 500px;
 }
 
 #linguas-esquerda > span
@@ -520,13 +464,47 @@ ul > li
 
 #linguas-direita
 {
-    background-color: #2b2c2c;
+    background-color: #2d2e2e;
+    color: #a4a5a6;
+    font-family:'fontes/Supercraft.otf'; 
+    padding-top: 120px;
+}
+
+#linguas-direita > #barras-progresso >.barra-span > span
+{
+    font-family:'fontes/Supercraft.otf';
+    color:#a4a5a6;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: 2.4rem;
+}
+.lingua-eua, .lingua-portugues
+{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom:10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.lingua-eua
+{
+    width: 40%;
+    background-color: #7c13a5;
+}
+
+.lingua-portugues
+{
+    width: 100%;
+    background-color: #7c13a5;
 }
 
 #projetos-esquerda
 {
     background-color: #292a2a;
     text-align: center;
+    line-height: 500px;
+
 }
 
 #projetos-esquerda > span
@@ -578,15 +556,17 @@ ul > li
         position: relative;
         align-items: center;
         justify-content: center;
+
     }
+   
 
      .box-e
     {
         width:auto;
         height: 250px;
         position:relative;
-        
     }
+
     #sobre-esquerda > span
     {
         position:absolute;
@@ -602,14 +582,7 @@ ul > li
         left:50%;
         transform:translate(-50%,-50%)
     }
-    
-    #ferramentas-esquerda > span
-    {
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%)
-    }
+
     
     #educacao-esquerda > span
     {
@@ -626,6 +599,7 @@ ul > li
         left:50%;
         transform:translate(-50%,-50%)
     }
+ 
     
     #projetos-esquerda > span
     {
@@ -635,13 +609,9 @@ ul > li
         transform:translate(-50%,-50%)
     }
     
-    .box-d
-    {
-        width:100%;
-        height:auto;
-        align-items: center;
-    }
+    
 
+ 
     #barras-progresso
     {
         width: 100%;
